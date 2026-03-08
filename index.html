@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dhananjay's Developer Portfolio — Aspiring Python & AI Developer showcasing projects, skills, and experience.">
+    <meta name="keywords" content="developer, portfolio, python, AI, machine learning, software engineer">
+    <meta name="author" content="Dhananjay">
+    <title>Dhananjay | Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Library (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== CURSOR GLOW EFFECT ========== -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-my">My</span>Folio<span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#internships" class="nav-link">Internships</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-resume-btn" onclick="openResumeModal()">
+                <i class="fas fa-file-alt"></i> Resume
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-effects">
+            <div class="hero-gradient-orb orb-1"></div>
+            <div class="hero-gradient-orb orb-2"></div>
+            <div class="hero-gradient-orb orb-3"></div>
+            <div class="hero-grid"></div>
+        </div>
+
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+                <span class="badge-dot"></span>
+                Open to opportunities
+            </div>
+
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                Hi, I'm <span class="hero-name">Dhananjay</span>
+            </h1>
+
+            <div class="hero-typewriter" data-aos="fade-up" data-aos-delay="300">
+                <span class="typewriter-prefix">I build </span>
+                <span class="typewriter-text" id="typewriterText"></span>
+                <span class="typewriter-cursor">|</span>
+            </div>
+
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                Aspiring <strong>Python Developer</strong> & <strong>AI Enthusiast</strong> passionate about
+                building intelligent systems that solve real-world problems. Currently exploring
+                machine learning, data analytics, and full-stack development.
+            </p>
+
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="hero-social" data-aos="fade-up" data-aos-delay="600">
+                <a href="https://github.com/Dhananjay-gh" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dhananjay-suresh-1644a3322" target="_blank" class="social-link"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:dhananajays75@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me and my technical skills</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Who I Am</h3>
+                    <p>
+                        I'm an aspiring Python Developer and AI enthusiast with a passion for
+                        building software that makes a difference. I love turning complex problems
+                        into simple, elegant solutions using modern technologies.
+                    </p>
+                    <p>
+                        Currently focusing on machine learning, data analytics, and building
+                        full-stack applications. I believe in continuous learning and staying
+                        updated with the latest in tech.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="7">0</span>
+                            <span class="stat-label">Certificates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-skills" data-aos="fade-left">
+                    <h3>Tech Stack</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+                            <i class="fas fa-brain"></i>
+                            <span>AI / ML</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="450">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTERACTIVE PARTICLE SECTION ========== -->
+    <section class="interactive-particles-section" id="interactiveArea">
+        <canvas id="particleCanvas"></canvas>
+        <div class="interactive-text" data-aos="fade-up">
+            <span class="interactive-hint"><i class="fas fa-hand-pointer"></i> Hover & interact with the
+                particles</span>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of the things I've built recently</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/projects/fleet-allocation.png" alt="AI Fleet Allocation System">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Dhananjay-gh" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AI Fleet Allocation & Shortage Prediction</h3>
+                        <p class="project-description">
+                            An intelligent system that predicts vehicle shortages and optimizes
+                            fleet allocation using machine learning algorithms for real-time
+                            demand forecasting.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Streamlit</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="assets/projects/sap-vendor-risk.png"
+                            alt="AI-Powered SAP Vendor Payment Risk Analytics">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Dhananjay-gh" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AI-Powered SAP Vendor Payment Risk Analytics</h3>
+                        <p class="project-description">
+                            An enterprise-grade analytics system that leverages AI to detect payment
+                            anomalies, assess vendor risk profiles, and flag potentially fraudulent
+                            transactions in SAP environments — reducing financial exposure and improving
+                            compliance monitoring.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>React</span>
+                            <span>SAP</span>
+                            <span>AI/ML</span>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="assets/projects/educore.png" alt="EduCore E-Learning Platform">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Dhananjay-gh" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">EduCore — Online E-Learning Platform</h3>
+                        <p class="project-description">
+                            A full-featured e-learning platform offering free courses to students,
+                            integrated with live class streaming, interactive quiz sections, progress
+                            tracking, and a student dashboard — built for scalable, accessible education.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="assets/projects/job-portal.png" alt="Online Job Portal">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Dhananjay-gh" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Online Job Portal</h3>
+                        <p class="project-description">
+                            A comprehensive job portal mimicking industry-standard features — including
+                            job listings with advanced search filters, employer dashboards, applicant
+                            profile management, resume uploads, and real-time application tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>JSP</span>
+                            <span>HTML</span>
+                            <span>Bootstrap</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="assets/projects/campus-grievance.png" alt="Campus Grievance Redressal System">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Dhananjay-gh" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Campus Grievance Redressal System</h3>
+                        <p class="project-description">
+                            A secure platform enabling students to file complaints anonymously,
+                            with an admin dashboard for tracking, categorizing, and resolving
+                            grievances — ensuring transparency and accountability in campus governance.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>SQLite</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CERTIFICATES SECTION ========== -->
+    <section class="section certificates" id="certificates">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;certificates&gt;</span>
+                <h2 class="section-title">Certificates</h2>
+                <p class="section-subtitle">Credentials that validate my skills</p>
+            </div>
+
+            <div class="certificates-layout">
+                <!-- Featured Certificates (Left Side) -->
+                <div class="certificates-featured">
+
+                    <!-- Certificate 1 -->
+                    <div class="certificate-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="cert-title">5 Day Intensive Course on Agentic AI</h3>
+                        <p class="cert-issuer">Google</p>
+                        <button class="btn btn-sm"
+                            onclick="openCertModal('assets/certificates/Agentic_AI_Google.pdf', '5 Day Intensive Course on Agentic AI')">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="certificate-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="cert-title">Data Science and Methodology</h3>
+                        <p class="cert-issuer">IBM</p>
+                        <button class="btn btn-sm"
+                            onclick="openCertModal('assets/certificates/ibm-data science methodology certificate .pdf', 'Data Science and Methodology')">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Certificate 3 -->
+                    <div class="certificate-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="cert-title">Prompt Engineering with ChatGPT</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <button class="btn btn-sm"
+                            onclick="openCertModal('assets/certificates/Dhananjay coursera.pdf', 'Prompt Engineering with ChatGPT')">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Certificate 4 -->
+                    <div class="certificate-card" data-aos="flip-left" data-aos-delay="400">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="cert-title">TCS iON Career Edge - Young Professional</h3>
+                        <p class="cert-issuer">TCS</p>
+                        <button class="btn btn-sm"
+                            onclick="openCertModal('assets/certificates/Dhananjay.pdf', 'TCS iON Career Edge - Young Professional')">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Certificate 5 -->
+                    <div class="certificate-card" data-aos="flip-left" data-aos-delay="500">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="cert-title">Python Coder</h3>
+                        <p class="cert-issuer">Kaggle</p>
+                        <button class="btn btn-sm"
+                            onclick="openCertModal('assets/certificates/Python Coder.png', 'Python Coder')">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Certificate 6 -->
+                    <div class="certificate-card" data-aos="flip-left" data-aos-delay="600">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="cert-title">Learn Pandas with ChatGPT</h3>
+                        <p class="cert-issuer">IBM</p>
+                        <button class="btn btn-sm"
+                            onclick="openCertModal('assets/certificates/ibm-pandas.pdf', 'Learn Pandas with ChatGPT')">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Certificate 7 -->
+                    <div class="certificate-card" data-aos="flip-left" data-aos-delay="700">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="cert-title">MySQL and PHP</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <button class="btn btn-sm"
+                            onclick="openCertModal('assets/certificates/udemy-php and MySQL certificate.pdf', 'MySQL and PHP')">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Sidebar — View All Certificates (Right Side) -->
+                <div class="certificates-sidebar" data-aos="fade-left" data-aos-delay="200">
+                    <div class="sidebar-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>All Certificates</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li class="cert-list-item">
+                            <div class="cert-list-dot"></div>
+                            <div class="cert-list-info">
+                                <span class="cert-list-name">5 Day Intensive Course on Agentic AI</span>
+                                <span class="cert-list-org">Google</span>
+                            </div>
+                            <button class="cert-list-view"
+                                onclick="openCertModal('assets/certificates/Agentic_AI_Google.pdf', '5 Day Intensive Course on Agentic AI')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </li>
+                        <li class="cert-list-item">
+                            <div class="cert-list-dot"></div>
+                            <div class="cert-list-info">
+                                <span class="cert-list-name">Data Science and Methodology</span>
+                                <span class="cert-list-org">IBM</span>
+                            </div>
+                            <button class="cert-list-view"
+                                onclick="openCertModal('assets/certificates/ibm-data science methodology certificate .pdf', 'Data Science and Methodology')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </li>
+                        <li class="cert-list-item">
+                            <div class="cert-list-dot"></div>
+                            <div class="cert-list-info">
+                                <span class="cert-list-name">Prompt Engineering with ChatGPT</span>
+                                <span class="cert-list-org">Coursera</span>
+                            </div>
+                            <button class="cert-list-view"
+                                onclick="openCertModal('assets/certificates/Dhananjay coursera.pdf', 'Prompt Engineering with ChatGPT')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </li>
+                        <li class="cert-list-item">
+                            <div class="cert-list-dot"></div>
+                            <div class="cert-list-info">
+                                <span class="cert-list-name">TCS iON Career Edge - Young Professional</span>
+                                <span class="cert-list-org">TCS</span>
+                            </div>
+                            <button class="cert-list-view"
+                                onclick="openCertModal('assets/certificates/Dhananjay.pdf', 'TCS iON Career Edge - Young Professional')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </li>
+                        <li class="cert-list-item">
+                            <div class="cert-list-dot"></div>
+                            <div class="cert-list-info">
+                                <span class="cert-list-name">Python Coder</span>
+                                <span class="cert-list-org">Kaggle</span>
+                            </div>
+                            <button class="cert-list-view"
+                                onclick="openCertModal('assets/certificates/Python Coder.png', 'Python Coder')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </li>
+                        <li class="cert-list-item">
+                            <div class="cert-list-dot"></div>
+                            <div class="cert-list-info">
+                                <span class="cert-list-name">Learn Pandas with ChatGPT</span>
+                                <span class="cert-list-org">IBM</span>
+                            </div>
+                            <button class="cert-list-view"
+                                onclick="openCertModal('assets/certificates/ibm-pandas.pdf', 'Learn Pandas with ChatGPT')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </li>
+                        <li class="cert-list-item">
+                            <div class="cert-list-dot"></div>
+                            <div class="cert-list-info">
+                                <span class="cert-list-name">MySQL and PHP</span>
+                                <span class="cert-list-org">Udemy</span>
+                            </div>
+                            <button class="cert-list-view"
+                                onclick="openCertModal('assets/certificates/udemy-php and MySQL certificate.pdf', 'MySQL and PHP')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="sidebar-footer">
+                        <span class="cert-count"><i class="fas fa-medal"></i> 7 Certifications Earned</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTERNSHIP SECTION ========== -->
+    <section class="section internships" id="internships">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;internships&gt;</span>
+                <h2 class="section-title">Internship Experience</h2>
+                <p class="section-subtitle">Hands-on industry experience and professional growth</p>
+            </div>
+
+            <div class="internships-timeline">
+
+                <!-- Internship 1 -->
+                <div class="internship-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="internship-timeline-dot"></div>
+                    <div class="internship-content">
+                        <div class="internship-header">
+                            <div class="internship-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="internship-meta">
+                                <h3 class="internship-role">AI Analyst</h3>
+                                <p class="internship-company"><i class="fas fa-building"></i> BluePrint Technologies,
+                                    Bangalore</p>
+                                <span class="internship-duration"><i class="fas fa-calendar-alt"></i> 2026</span>
+                            </div>
+                        </div>
+                        <p class="internship-description">
+                            Worked on analyzing and developing AI-driven solutions to extract actionable insights
+                            from complex datasets. Responsibilities included building and fine-tuning machine learning
+                            models, performing exploratory data analysis, designing automated data pipelines, and
+                            collaborating with cross-functional teams to translate business requirements into
+                            intelligent analytics solutions. Gained hands-on experience with predictive modeling,
+                            natural language processing, and deploying AI models into production environments.
+                        </p>
+                        <div class="internship-tech">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Data Analytics</span>
+                            <span>NLP</span>
+                            <span>AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship 2 (Add more as needed) -->
+                <div class="internship-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="internship-timeline-dot"></div>
+                    <div class="internship-content">
+                        <div class="internship-header">
+                            <div class="internship-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="internship-meta">
+                                <h3 class="internship-role">UI/UX Designer Intern</h3>
+                                <p class="internship-company"><i class="fas fa-building"></i> Sristhi Innovatives Pvt
+                                    Ltd, Trivandrum</p>
+                                <span class="internship-duration"><i class="fas fa-calendar-alt"></i> 2025</span>
+                            </div>
+                        </div>
+                        <p class="internship-description">
+                            Focused on crafting intuitive and user-centric web interfaces by conducting user research,
+                            creating wireframes, and developing high-fidelity prototypes. Designed responsive web pages
+                            with a strong emphasis on usability, accessibility, and seamless user journeys — ensuring
+                            every interaction felt natural and effortless. Collaborated closely with developers to
+                            implement pixel-perfect designs, conducted A/B testing to optimize conversion flows, and
+                            applied UX best practices to deliver engaging digital experiences that prioritize the
+                            end user at every stage.
+                        </p>
+                        <div class="internship-tech">
+                            <span>Figma</span>
+                            <span>UI/UX Design</span>
+                            <span>Wireframing</span>
+                            <span>Prototyping</span>
+                            <span>User Research</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div class="modal" id="certModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <iframe src="" id="modalPdf" class="modal-pdf" title="Certificate"></iframe>
+        </div>
+    </div>
+
+    <!-- Resume Modal -->
+    <div class="modal resume-modal" id="resumeModal">
+        <div class="modal-content resume-modal-content">
+            <div class="resume-modal-header">
+                <h3 class="modal-title"><i class="fas fa-file-alt"></i> My Resume</h3>
+                <div class="resume-modal-actions">
+                    <a href="resume/Dhananjay_resume_26.pdf" download class="btn btn-sm resume-download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                    <button class="modal-close" onclick="closeResumeModal()">&times;</button>
+                </div>
+            </div>
+            <iframe src="" id="resumePdf" class="modal-pdf resume-pdf" title="Resume"></iframe>
+        </div>
+    </div>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have a question or want to work together?</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm currently looking for new opportunities. Whether you have a question
+                        or just want to say hi, my inbox is always open!
+                    </p>
+
+                    <div class="contact-links">
+                        <a href="mailto:dhananajays75@gmail.com" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">dhananajays75@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Dhananjay-gh" target="_blank" class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/Dhananjay-gh</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dhananjay-suresh-1644a3322" target="_blank"
+                            class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/dhananjay-suresh</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/your-form-id"
+                        method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-my">My</span>Folio<span class="logo-dot">.</span>
+                </a>
+                <p class="footer-text">Designed & Built by Dhananjay &copy; 2026</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Dhananjay-gh" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dhananjay-suresh-1644a3322" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:dhananajays75@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
